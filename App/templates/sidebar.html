@@ -1,0 +1,23 @@
+{% block sidebar %}
+
+<style>
+  .card {
+    box-shadow: 0 16px 48px #6a6a6b;
+  }
+</style>
+
+<div class="col-md-4 float-right ">
+  <div class="card my-4">
+    {% if amount == 0 or amount == 1 %}
+    <h5 class="card-header">You've read {{ amount }} book.</h5>
+    {% elif amount > 1 %}
+    <h5 class="card-header">Good job!  You've read {{ amount }} books.</h5>
+    {% endif %}
+    <div class="card-body">
+      <p class="card-text"> If you don't know what to read, check out these ideas </p>
+      <a href="https://reedsy.com/discovery/blog/best-books-to-read-in-a-lifetime" class="btn btn-primary">Reading List</a>
+    </div>
+  </div>
+</div>
+
+{% endblock sidebar %}
