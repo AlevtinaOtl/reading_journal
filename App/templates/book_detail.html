@@ -11,8 +11,8 @@
         <p class="card-text ">{{ book.description }}</p>
         <h4>My opinion</h4>
         <p class="card-text ">{{ book.review }}</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
         <a href="{% url 'edit_book' book.id %}" class="btn btn-primary">Edit</a>
-        <a href="{% url 'home'  %}" class="btn btn-primary">Back</a>
       </div>
     </div>
     {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}

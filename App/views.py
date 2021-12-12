@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Book
 from django.views.generic.base import View
 from django.views import generic
-from django.views.generic.edit import UpdateView, CreateView, FormView
+from django.views.generic.edit import UpdateView, CreateView, DeleteView, FormView
 from django.urls import reverse_lazy
 
 from django.contrib.auth.views import LoginView, LogoutView
@@ -72,3 +72,8 @@ class EditBook(LoginRequiredMixin, UpdateView):
     fields = ['title', 'author', 'year', 'description', 'review']
     success_url = reverse_lazy('home')
     template_name = 'add_book.html'
+
+class DeleteBook(LoginRequiredMixin, DeleteView):
+    model = Book
+    success_url = reverse_lazy('home')
+    template_name = 'task_confirm_delete.html'

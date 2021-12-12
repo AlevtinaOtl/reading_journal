@@ -19,8 +19,9 @@
         <div class="card-body">
           <h2 class="card-title">{{ book.title }}</h2>
           <p class="card-text text-muted h6">{{ book.author }} | {{ book.year }} </p>
-          <p class="card-text">{{book.content|slice:":200"}}</p>
-          <a href="{% url 'book_detail' book.id  %}" class="btn btn-primary btn">View</a>
+          <p class="card-text">{{ book.content|slice:":200" }}</p>
+          <a href="{% url 'book_detail' book.id %}" class="btn btn-primary btn">Del</a>
+          <a href="{% url 'delete_book' book.id %}" class="btn btn-primary btn">Delete</a>
         </div>
       </div>
       {% endfor %}
