@@ -8,8 +8,8 @@
         <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-          <a href="{% url 'home'  %}" class="btn btn-primary">Back &rarr;</a>
+        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+          <a href="{% url 'home'  %}" class="btn btn-outline-secondary">Back</a>
         </form>
       </div>
     </div>

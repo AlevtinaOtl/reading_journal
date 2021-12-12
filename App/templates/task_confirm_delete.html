@@ -5,15 +5,12 @@
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3 left  top">
       <div class="card-body">
-        <h1>Delete</h1>
+        <h1>Are you sure?</h1>
         <p></p>
         <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Delete</button>
-          <p></p>
-          <p>Are you sure?</p>
-          <a href="{% url 'register' %}">Register</a>
+        <button type="submit" class="btn btn-primary">Yes</button>
         </form>
       </div>
     </div>
