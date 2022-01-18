@@ -73,6 +73,7 @@ class EditBook(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('home')
     template_name = 'add_book.html'
 
+
 class DeleteBook(LoginRequiredMixin, DeleteView):
     model = Book
     success_url = reverse_lazy('home')
